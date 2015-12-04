@@ -1,0 +1,40 @@
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+
+Begin optimization report for: main()
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main()) [1] pi_parallel.c(4,11)
+
+
+    Report from: OpenMP optimizations [openmp]
+
+OpenMP Construct at pi_parallel.c(10,1)
+   remark #16200: OpenMP DEFINED LOOP WAS PARALLELIZED
+
+    Report from: Loop nest, Vector & Auto-parallelization optimizations [loop, vec, par]
+
+
+LOOP BEGIN at pi_parallel.c(10,1)
+   remark #15301: OpenMP SIMD LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at pi_parallel.c(10,1)
+<Remainder>
+   remark #15301: REMAINDER LOOP WAS VECTORIZED
+LOOP END
+
+LOOP BEGIN at pi_parallel.c(10,1)
+<Remainder>
+LOOP END
+===========================================================================
